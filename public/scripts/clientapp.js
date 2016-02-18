@@ -17,7 +17,7 @@ function postData() {
         values[field.name] = field.value;
     });
 
-    console.log(values);
+    //console.log(values);
 
     $('#people-form').find('input[type=text]').val('');
 
@@ -47,7 +47,7 @@ function postAnimalData() {
         values[field.name] = field.value;
     });
 
-    console.log(values);
+    //console.log(values);
 
     $('#animal-form').find('input[type=text]').val('');
 
@@ -75,7 +75,7 @@ function addAnimalId() {
     $.each($('#animal_id').serializeArray(), function(i, field) {
         values[field.name] = field.value;
     });
-
+    console.log('hi');
     console.log(values);
 
     $('#animal-form').find('input[type=text]').val('');
@@ -96,7 +96,7 @@ function getData() {
         type: 'GET',
         url: '/people',
         success: function(data) {
-            console.log(data);
+   //         console.log(data);
             appendPeople(data);
         }
     });
@@ -108,7 +108,7 @@ function getAnimalData() {
         type: 'GET',
         url: '/animal',
         success: function(data) {
-            console.log(data);
+         //   console.log(data);
             appendAnimal(data);
         }
     });
