@@ -1,0 +1,29 @@
+//text for animal assigner database
+- Table: public.animal
+
+-- DROP TABLE public.animal;
+
+CREATE TABLE public.animal
+(
+  animal_id integer NOT NULL DEFAULT nextval('animal_animal_id_seq'::regclass),
+  animal_name character varying(80),
+  animal_color character varying(80),
+  CONSTRAINT animal_key PRIMARY KEY (animal_id)
+  )
+
+  -- Table: public.people
+
+  -- DROP TABLE public.people;
+
+  CREATE TABLE public.people
+  (
+    person_id integer NOT NULL DEFAULT nextval('people_person_id_seq'::regclass),
+    first_name character varying(80),
+    last_name character varying(80),
+    CONSTRAINT person_key PRIMARY KEY (person_id)
+  )
+  WITH (
+    OIDS=FALSE
+  );
+  ALTER TABLE public.people
+    OWNER TO chrisgibson;
