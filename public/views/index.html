@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello SQL!</title>
+    <title>Animal Assigner Database</title>
     <script type="text/javascript" src="/vendors/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
 </head>
 <body>
-<h1>SQL in Node!</h1>
+<h1>Magic Animal Assigner!</h1>
 
-<form id="sql-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" />
+<form id="people-form">
 
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" />
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" />
 
-    <button id="submit-button">Save to DB!</button>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" />
+
+    <button id="submit-people">Submit Person</button>
 </form>
+<form id="animal-form">
+    <label for="animal_name">Spirit Animal:</label>
+    <input type="text" id="animal_name" name="animal_name" />
 
+    <label for="animal_color">Animal Color:</label>
+    <input type="text" id="animal_color" name="animal_color" />
+
+    <button id="submit-animal">Submit Animal</button>
+</form>
+<div id="person-data"></div>
+<div id="animal-data"></div>
 </body>
 </html>
